@@ -1,0 +1,104 @@
+.nav-items {
+  display: flex;
+  font-size: 13px;
+  .nav-item {
+    .nav-link {
+      position: relative;
+      padding: 10px;
+      .nav-icon::after {
+        font-family: "themify";
+        content: "\e68e";
+        margin-left: 8px;
+        line-height: 20px;      
+      }
+      .cart-icon::after {
+        font-family: "themify";
+        content: "\e60d";
+        margin-left: 8px;
+        line-height: 20px;      
+      }
+      .cart-amount {
+        position: absolute;
+        width: 15px;
+        height: 15px;
+        background-color: var(--red-primary);
+        border-radius: 50%;
+        color: white;
+        font-size: 10px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        top: 0px;
+        right: 0px;
+      }
+    }
+    .down-icon::after {
+      font-family: "fontawesome";
+      content: "\f107";
+      margin-left: 8px;
+      line-height: 20px;      
+    }
+  }
+  ul.submenu-right {
+    top: -10px;
+    right: -125%;
+  }
+  ul {
+    opacity: 0;
+    transform: scale(0);
+    transition-duration: 0.1s;
+    position: absolute;
+    width: 250px;
+    margin: 0;
+    margin-top: 10px;
+    padding: 0px 20px;
+    background-color: white;
+    border-radius: 5px;
+    li {
+      position: relative;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      padding: 10px 0px;
+      border-bottom: 0.5px solid rgb(214, 214, 214);
+      a {
+        transition-duration: 0.3s;
+        transition-property: color;
+        color: black!important;
+        font-size: 15px;
+        font-weight: 400;
+        font-family: "Work Sans", Helvetica, Arial, sans-serif;
+      }
+    }
+    li:hover > a {
+      color: var(--red-primary)!important;
+    }
+    li:last-child {
+      border: none;
+    }
+    li.right-arrow:hover::after {
+      color: var(--red-primary)!important;
+    }
+    li.right-arrow::after {
+      font-family: 'fontawesome';
+      content: "\f105";
+      margin-right: 0;
+      color: black;
+    }
+  }
+
+  li:hover > ul {
+    opacity: 1;
+    transform: scale(1);
+  }
+
+}
+
+@media screen and (max-width: 960px) {
+  .nav-item {
+    display: none;
+  }
+  .nav-item.nav-icon {
+    display: inline-block;
+  }
+}

@@ -1,0 +1,113 @@
+.container {
+  z-index: 9999;
+  position: fixed;
+  top: 0;
+  right: -350px;
+  transition-duration: 0.3s;
+  transition-property: right;
+  .sidebar {
+    padding: 40px 10px;
+    width: 330px;
+    height: 100vh;
+    background-color: white;
+    box-shadow: -1px 1px 10px rgba(0,0,0,.1);
+    h3 {
+      font-size: 15px;
+      font-weight: 600;
+      letter-spacing: 0;
+      font-family: Poppins, Helvetica, Arial, sans-serif;
+      text-align: center;
+    }
+    p {
+      font-family: "Work Sans", Helvetica, Arial, sans-serif;
+      box-sizing: border-box;
+      margin-top: 10px;
+      padding: 0 10px 0 10px;
+      font-size: 12px;
+      opacity: 0.7;
+      text-align: center;
+      line-height: 1.5;
+    }
+    .colors {
+      margin: 30px 0px;
+      display: flex;
+      justify-content: space-around;
+      span {
+        display: inline-block;
+        width: 30px;
+        height: 30px;
+        border-radius: 50%;
+        background-color: black;
+      }
+      span:nth-child(1) {
+        background-color: #ff4a52;
+      }
+      span:nth-child(2) {
+        background-color: #ff9500;
+      }
+      span:nth-child(3) {
+        background-color: #ffcc00;
+      }
+      span:nth-child(4) {
+        background-color: #4cd964;
+      }
+      span:nth-child(5) {
+        background-color: #5ac8fa;
+      }
+      span:nth-child(6) {
+        background-color: #007aff;
+      }
+      span:nth-child(7) {
+        background-color: #5856d6;
+      }
+      span:nth-child(8) {
+        background-color: #ff2d55;
+      }
+    }
+  }
+  .nav {
+    position: fixed;
+    right: 0;
+    top: 150px;
+    width: 40px;
+    height: 140px;
+    transition-duration: 0.3s;
+    transition-property: right;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: center;
+    background-color: white;
+    color: black;
+    border-bottom-left-radius: 5px;
+    border-top-left-radius: 5px;
+    z-index: -1;
+    box-shadow: 0 3px 15px rgba(0,0,0,.1);
+    span {
+        cursor: pointer;
+    }
+    span::before {
+        font-family: 'themify';
+        font-size: 15px;;
+    }
+    span:nth-child(1)::before {
+        content: "\e60f";
+    }
+    span:nth-child(2)::before {
+        content: "\e634";
+    }
+    span:nth-child(3)::before {
+        content: "\e6b7";
+    }
+    span:nth-child(4)::before {
+        content: "\e60d";
+    }
+  }
+}
+
+.container.active {
+    right: 0;
+    .nav {
+        right: 350px;
+    }
+}

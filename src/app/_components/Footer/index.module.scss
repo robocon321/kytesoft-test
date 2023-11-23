@@ -1,0 +1,127 @@
+.footer {
+  background-color: black;
+  color: #cccccc;
+  font-family: "Work Sans", Helvetica, Arial, sans-serif;
+  padding: 50px;
+
+  p {
+    padding-top: 0.5em;
+    padding-bottom: 0.5em;
+    font-size: 15px;
+    font-weight: 400;
+    line-height: 1.7;
+    margin: 0px;
+  }
+
+  h3 {
+    color: white;
+  }
+
+  .award {
+    .image {
+      width: 246px;
+      img {
+        width: 100%;
+      }
+    }
+  }
+
+  .contact {
+    .icon {
+      font-family: "themify";
+      margin-right: 5px;
+    }
+
+    .phone::before {
+      content: "\e621";
+    }
+
+    .locate::before {
+      content: "\e693";
+    }
+
+    .alarm::before {
+      content: "\e6c6";
+    }
+
+    ul {
+      display: flex;
+      margin: 0;
+      padding: 0;
+      margin-top: 10px;
+      li {
+        width: 40px;
+        height: 40px;
+        border-radius: 50%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        margin-right: 10px;
+        a {
+          display: flex;
+          justify-content: center;
+          align-items: center;
+          width: 100%;
+          height: 100%;
+          color: white;
+        }
+      }
+
+      li.facebook {
+        background-color: #2d5f9a;
+      }
+
+      li.twitter {
+        background-color: #00c3f3;
+      }
+
+      li.youtube {
+        background-color: #cc181e;
+      }
+
+      li.pinterest {
+        background-color: #bd081c;
+      }
+
+      li.instagram {
+        background-color: #405de6;
+      }
+    }
+  }
+
+  .recent-trip {
+    img {
+      width: 100%;
+      border-radius: 5px;
+    }
+  }
+
+  hr {
+    height: 0.5px;
+    background-color: gray;
+    border: none;
+    margin: 40px 0px;
+  }
+
+  .copyright {
+    color: #cccccc;
+    font-size: 15px;
+    font-weight: 400;
+    line-height: 1.7;
+  }
+
+  ul {
+    display: flex;
+    margin: 0px;
+    padding: 0px;
+    li {
+      margin-right: 10px;
+      a {
+        color: #cccccc;
+        font-size: 15px;
+        font-weight: 400;
+        line-height: 1.7;
+      }
+    }
+  }
+}

@@ -1,0 +1,108 @@
+.container {
+  display: inline-block;
+  transition-duration: 0.2s;
+  position: relative;
+  border: 1px solid #dce0e0;
+  border-bottom-left-radius: 5px;
+  border-bottom-right-radius: 5px;
+
+  .image {
+    width: 100%;
+    img {
+      border-top-left-radius: 5px;
+      border-top-right-radius: 5px;
+      width: 100%;
+    }
+  }
+
+  .body {
+    position: absolute;
+    left: 0;
+    top: 100px;
+
+    h3, .price, .review {
+        margin: 5px 0px;
+    }
+
+    h3, .review {
+        margin-left: 10px;
+    }
+
+    h3 {
+      font-weight: 700;
+      letter-spacing: 0px;
+      color: white;
+    }
+    
+    .review .star {
+      font-size: 14px;
+      margin-right: 2px;
+    }
+
+    .review .star::after {
+      font-family: "fontawesome";
+      content: "\f006";
+      color: #d2d2d2;
+    }
+
+    .review .star.active::after {
+      content: "\f005";
+      color: #1ec6b6;
+    }
+
+    .review a,
+    .createAt {
+      font-size: 12px;
+      font-weight: 600;
+    }
+
+    .createAt::before {
+      font-family: "themify";
+      content: "\e72b";
+      font-style: normal;
+      font-weight: 400;
+      font-variant: normal;
+      text-transform: none;
+      -webkit-font-smoothing: antialiased;
+      margin-right: 2px;
+    }
+
+    .sale {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        position: absolute;
+        top: 0;
+        right: 0;
+        transform: translate(50%, -50%);
+        width: 40px;
+        height: 40px;
+        font-size: 12px;
+        border-radius: 50%;
+        color: white;
+        background-color: var(--blue-primary);
+    }
+
+    .price {
+        display: inline-block;
+        background-color: var(--red-primary);
+        color: #fff;
+        font-weight: 700;
+        font-size: 15px;
+        padding: 3px 5px 2px 5px;
+        -webkit-transition-duration: 0.2s;
+        -moz-transition-duration: 0.2s;
+        -o-transition-duration: 0.2s;
+        transition-duration: 0.2s;
+    }
+
+    .real-price {
+        font-weight: 400;
+        margin-right: 5px;
+        text-decoration: line-through;
+        opacity: .6;
+        padding: 3px 5px 2px 5px;
+    }
+
+  }
+}

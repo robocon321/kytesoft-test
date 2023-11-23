@@ -1,0 +1,81 @@
+.container {
+    position: fixed;
+    height: 100%;
+    z-index: 999;
+    .wrap-sidebar {
+        position: fixed;
+        top: 0;
+        right: -400px;
+        transition-duration: 0.3s;
+        transition-property: right;
+        width: 300px;
+        height: 100vh;        
+        overflow: scroll;
+        padding: 40px 20px;
+        background-color: rgba(255,255,255,.85);
+        z-index: 999;
+        .close-icon {
+            cursor: pointer;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            position: absolute;
+            top: 0;
+            right: 0;
+            margin: 40px;
+            width: 40px;
+            height: 40px;
+            border-radius: 50%;
+            background-color: var(--red-primary);
+        }
+        .close-icon::after {
+            content: "\e646";
+            font-family: 'themify';
+            color: white;
+            font-weight: 700;
+        }
+        ul {
+            margin: 0;
+            padding: 0;
+            margin-top: 40px;
+            margin-bottom: 40px;            
+            a {
+                color: black;
+                font-size: 24px;
+                line-height: 2em;
+                font-weight: 700;
+                font-family: Poppins, Helvetica, Arial, sans-serif;
+                transition-duration: 0.2s;
+                transition-property: color;
+            }
+
+            li:hover a {
+                color: var(--red-primary);
+            }
+        }
+        .cards {
+            padding: 40px 0px;
+            border-top: 0.1px solid rgb(202, 202, 202);
+            border-bottom: 0.1px solid rgb(202, 202, 202);
+        }
+        .icons {
+            display: flex;
+            align-items: center;
+            margin-top: 20px;
+            a {
+                width: 40px;
+                height: 40px;
+                margin: 10px;
+            }
+        }
+    }
+    .wrap-sidebar.active {
+        right: 0;
+    }
+    .overlay {
+        display: inline-block;
+        width: 100vw;
+        height: 100vh;
+        z-index: 1000;         
+    }
+}

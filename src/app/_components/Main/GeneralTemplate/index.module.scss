@@ -1,0 +1,20 @@
+.general-template {
+    margin: 70px 0px;
+    h2, p {
+        text-align: center;
+    };
+    h2 {
+        font-size: 36px;
+        text-transform: none;
+        letter-spacing: 0px;
+        font-weight: 700;
+        font-family: Poppins, Helvetica, Arial, sans-serif;
+        margin: 0;
+    };
+    p {
+        font-weight: 500;
+        color: #8D9199;
+        margin: 0;
+        margin-bottom: 50px;
+    }
+}
